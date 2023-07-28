@@ -21,3 +21,5 @@ full_name('guido', 'van rossum')
 
 print((lambda x:
 (x % 2 and 'odd' or 'even'))(4))
+
+list(map(lambda x: x*2, range(3)))
