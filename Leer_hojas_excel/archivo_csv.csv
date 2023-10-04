@@ -1,0 +1,7 @@
+Tipo|Cliente|Origen|Destino|Backup|Nombre Archivo|Extensión|Origen_HostFtp|Origen_Puerto|Origen_Usuario|Origen_Contraseña|Destino_HostFtp|Destino_Puerto|Destino_Usuario|Destino_Contraseña|Descripción|Observación
+Sftp|Derco|/home1/almaviva/GAW_TEST/Derco/In/|\\10.61.44.36\almwmsprd\LES\files\hostin\inp\|//Gaw/Clientes/Backup/Derco/Files/|DERCO|.txt|192.168.75.27|23033.0|almaviva|Ofi245|||||Mover Archivos del cliente a Wms|
+Sftp|Derco|\\10.61.44.36\almwmsprd\LES\files\hostin\inp\|/home1/almaviva/GAW_TEST/Derco/Out/|//Gaw/Clientes/Backup/Derco/Files/|ALM_DERCO|.txt|192.168.75.27|23033.0|almaviva|Ofi245|||||Mover Archivos de Wms al cliente|
+||||||||||||||||
+Sftp|Uma|\\192.168.101.215\uma\recibidos\pendientes\|\\10.61.44.36\almwmsprd\LES\files\hostin\inp\|//Gaw/Clientes/Backup/Derco/Files/|*|.TXT|192168101215|2222.0|uma_aplicaciones|052b3ec840|||||Mover Archivos del cliente a Wms|se conecta el cliente vpn pero se puede ingresar como carpeta compartida
+Sftp|Uma|\\192.168.101.215\uma\recibidos\pendientes\|/home1/almaviva/GAW_TEST/Uma/In/|//Gaw/Clientes/Backup/Derco/Files/|*|.TXT|192168101215|2222.0|uma_aplicaciones|052b3ec840|192.168.75.27|23033.0|almaviva|Ofi245|Mover Archivos del cliente a Wms|se conecta el cliente vpn pero se puede ingresar como carpeta compartida
+Sftp|Uma|/home1/almaviva/GAW_TEST/Uma/In/|\\10.61.44.36\almwmsprd\LES\files\hostin\inp\|//Gaw/Clientes/Backup/Derco/Files/|ALM_UMA|.TXT|192168101215|2222.0|uma_aplicaciones|052b3ec840|||||Mover Archivos del cliente a Wms|
