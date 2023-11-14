@@ -18,6 +18,8 @@ class Cleric(Character):
         self.hability = hability
         self.__power = 1000
 
+        assert health > 0, f"Health cannot be 0 or less"
+
     def get_power(self):
         return self.__power
     #pythonic getter
@@ -37,7 +39,7 @@ class Cleric(Character):
         del self.__power
 
 sebas = Character("Basti", "Human", 9999, 9999, 9999)
-healer = Cleric("Healer", "Human", 100, 100, 100, "Scream")
+healer = Cleric("Healer", "Human", -100, 100, 100, "Scream")
 
 def trap(character):
     character.health -= 10
