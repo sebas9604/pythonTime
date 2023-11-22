@@ -42,13 +42,18 @@ print(tara.speak('Grrr grrr'))
 #Parent class
 class Dog:
     species = "Canis familiaris"
-
+    all = []
     def __init__(self, name, age):
         self.name = name
         self.age = age
 
+        #add instance
+        Dog.all.insert(self)
     def __str__(self):
         return f"{self.name} is {self.age} years old"
+    
+    def __repr__(self) -> str:
+        return f"Dog('{self.name}, {self.age}')"
 
     def speak(self, sound):
         return f"{self.name} barks: {sound}"
