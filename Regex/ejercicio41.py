@@ -6,8 +6,8 @@ Asegúrate de que funcione incluso cuando hay atributos en las etiquetas."""
 import re
 
 regex_nombre = re.compile(r"<nombre[^>]*>(.*?)</nombre>", re.DOTALL)
-regex_etiqueta = re.compile(r"(<\w+>\s+)(.*?)<")
-#regex_etiqueta = re.compile(r"<nombre[^>]*>")
+#regex_etiqueta = re.compile(r"<\w+>(.*?)<")
+regex_etiqueta = re.compile(r"<nombre[^>]*>")
 
 entrada = """<datos>
     <nombre atributo="ejemplo">Juan</nombre>

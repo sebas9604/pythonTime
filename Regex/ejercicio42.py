@@ -6,7 +6,7 @@ Asegúrate de que la hora esté en el rango correcto y que los minutos estén en
 import re
 
 regex_hora = re.compile(r'^(?:[01]\d+|2[0-3]):[0-5]\d$')
-hora = "099:30"
+hora = "09:30"
 
 match = regex_hora.match(hora)
 
