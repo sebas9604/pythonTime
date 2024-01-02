@@ -39,7 +39,7 @@ class Cleric(Character):
         del self.__power
 
 sebas = Character("Basti", "Human", 9999, 9999, 9999)
-healer = Cleric("Healer", "Human", -100, 100, 100, "Scream")
+healer = Cleric("Healer", "Human", 100, 100, 100, "Scream")
 
 def trap(character):
     character.health -= 10
@@ -60,4 +60,7 @@ print(healer.power)
 del healer.power
 
 healer.power = 200
+print(healer.power)
+
+healer.power(1000)
 print(healer.power)
