@@ -13,9 +13,6 @@ class Clase:
 
     def __repr__(self) -> str:
         return f"Mi nombre es {self.nombre}"
-    
-    def __add__(self, x):
-        return x*x
 
 class ClaseHija(Clase):
     pass
