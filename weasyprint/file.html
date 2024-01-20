@@ -1,0 +1,164 @@
+----------PARTE 1----------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0; 
+            height: 100%;
+        }
+		.Sanitas img {
+			width: 240px;
+			height: 70px;
+			position: relative;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-bottom: 20px;
+		}
+        .fecha {
+            display: flex;
+            font-size: small;
+        }
+        .datos {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: small;
+        }
+        .ref {
+            display: flex;
+            font-size: small;
+        }
+        .escrito {
+            display: flex;
+            font-size: small;
+            text-align: justify;
+            white-space: pre-line;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            font-size: small;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        .Pie img {
+            width: 100%;
+            height: 43px;
+            position: relative;
+            bottom: 0;
+			margin-bottom: 20px; 
+        }
+        @media print {
+            .Pie img, 
+            .Sanitas img{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="Sanitas img">
+        <img src="img-logo_orig.jpg" alt="">
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="fecha"> Se expide a los ${dia} de ${mes} del ${anio}</div>
+    <br/>
+    <br/>
+    <div class="datos">
+        <div>Señores:</div>
+        <div>${Campo8}</div>
+        <div>${Campo5} ${Campo6}</div>
+        <div>${Campo12}</div>
+        <div>${Campo13}- ${Campo14}.</div>
+    </div>
+    <br/>
+    <div class="ref">
+        <div>REF. <strong>Mora en el pago de aportes al Sistema General de Seguridad Social en Salud a través de EPS Sanitas.</strong></div>
+    </div>
+    <br/>
+	<div class="escrito">
+		Reciban un cordial saludo:
+
+		EPS Sanitas, se permite relacionar los trabajadores dependientes cuya afiliación al Sistema General de Seguridad Social en Salud presenta mora por el no pago de las cotizaciones, con corte a ${Campo2}.
+
+		Lo anterior se establece de acuerdo con la información emitida de los operadores de información de la Planilla Integrada de Liquidación de Aportes-PILA sobre la cual EPS Sanitas no identifica el pago de aportes a salud, ni se evidencia registro de novedad de retiro de sus trabajadores.
+
+		En este sentido, EPS Sanitas le informa al empleador y/o aportante que debe efectuar los pagos de las cotizaciones en mora a salud para los trabajadores con vínculo laboral vigente a través de la PILA a efecto de normalizar la afiliación y de esta manera garantizar el acceso al Plan Obligatorio en Salud.
+
+		En caso que existan trabajadores que no mantienen vínculo laboral vigente y el empleador o aportante no informó la novedad de retiro laboral correspondiente, lo invitamos a realizar el pago de la cotización a salud y la marcación de la novedad de retiro laboral a través de la PILA, del operador de información de su elección y que se encuentre debidamente autorizado por el Ministerio de Salud y Protección Social.
+
+		Una vez realizados los pagos de acuerdo a lo mencionado anteriormente y reportados por el Operador de Información a EPS Sanitas, se procederá con la correspondiente actualización en nuestro sistema de información.  No es necesario remitir a EPS Sanitas copia de los pagos.
+
+		Ahora bien, se debe tener en cuenta que corresponde al aportante y/o cotizante reportar el valor a cancelar basado en la nómina pagada o de los ingresos percibidos en el mes calendario anterior a aquel que se busca cubrir, teniendo en cuenta lo establecido en el Decreto 780 Articulo 3.2.1.3.
+
+		Artículo 3.2.1.3 Ingreso Base de Cotización para los aportes en salud. En el Sistema de Seguridad Social en Salud, por tratarse de un riesgo que se cubre mediante el pago anticipado de los aportes, se tomará como base para el cálculo de éstos el valor de la nómina pagada o de los ingresos percibidos en el mes calendario anterior a aquel que se busca cubrir, según sea el caso.
+	</div>
+    <br/>
+    <br/>
+    <br/>
+    <div class="Pie img">
+        <img src="img-logo_orig.jpg" alt="">
+    </div>
+    <br/>
+    <div class="Sanitas img">
+        <img src="img-logo_orig.jpg" alt="">
+    </div>
+    <br/>
+    <br/>
+	<div class="escrito">
+		Finalmente, los intereses moratorios serán los que liquide el operador en la planilla PILA al momento de realizarse el pago.
+	</div>
+    <div class="escrito">
+		Cualquier inquietud con gusto será atendida en nuestra línea de atención al usuario 3759000 en Bogotá D.C. y  018000919100 en el resto del país o en el correo electrónico carteraeps@colsanitas.com, registrando número de identificación del aportante y/o cotizante(s) que se requieran validar, con el fin de dar mayor agilidad a la respuesta.
+	</div>
+    <br/>
+    <table>
+        <tr>
+            <th>Periodo Mora</th>
+            <th>Tipo Id. Afiliado</th>
+            <th>Número Id. Afiliado</th>
+            <th>Nombres y Apellidos Afiliado</th>
+        </tr>
+-------  PARTE 2   --------------
+        <tr>
+        <td>${user[1]} del ${user[2]}</td>
+        <td>${user[3]}</td>
+        <td>${user[4]}</td>
+        <td>${user[5]}</td>
+        </tr>
+-------  PARTE 3   --------------
+    </table>
+    <br/>
+    <br/>
+	<div class="datos">
+        <div>Cordialmente,</div>
+        <div><b>Angelica Valbuena Ramírez</b></div>
+        <div><b>Coordinador de Gestión de Aportes</b></div>
+		<div><b>Gerencia de Operaciones</b></div>
+    </div>
+	<p class="escrito">
+		Ahora en www.epssanitas.com encontrarás una sección especialmente diseñada para nuestros empleadores, ingresa ya y disfruta de los beneficios de tener todo  al alcance tus manos.
+
+		Nota: Este Mensaje ha sido enviado por un sistema automático, por favor no intente responder a este correo puesto que no será recibido.
+	</p>
+</body>
+<footer>
+    <div class="Pie img">
+        <img src="img-logo_orig.jpg" alt="">
+    </div>
+</footer>
+</html>
