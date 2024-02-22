@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Meli Twin Practice</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  </head>
+
+  <body>
+    <header>
+      <!-- place navbar here -->
+        <div class="container-fluid fnb">
+            <div class="row">
+                <div class="col-2"><a href="#" target="_blank" rel="noopener noreferrer"><img src="img/logo-removebg-preview.png" width="160" height="60"></a></div>
+                <div class="col-6"><input class="form-control me-2 mt-2 rounded-0" type="search" placeholder="Buscar productos, marcas y más..." aria-label="Search"></div>
+                <div class="col-4"><a href="#" target="_blank" rel="noopener noreferrer"><img src="img/disney.png" width="400" height="60"></a></div>
+                <div class="col-2">Enviar a {% Usuario %}</div>
+                <div class="col-6">
+                    <div class="list-group list-group-horizontal pb-3">
+                        <div class="dropdown">
+                            <button class="list-group-item btn btn-secondary dropdown-toggle rounded-0 fnb" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Categorías
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                          </div>
+                      
+                        <a href="#" class="list-group-item list-group-item fnb">Ofertas</a>
+                        <a href="#" class="list-group-item list-group-item fnb">Historial</a>
+                        <a href="#" class="list-group-item list-group-item fnb">Supermercado</a>
+                        <a href="#" class="list-group-item list-group-item fnb">Moda</a>
+                        <a href="#" class="list-group-item list-group-item fnb">Vender</a>
+                        <a href="#" class="list-group-item list-group-item fnb">Ayuda/PQR</a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="list-group list-group-horizontal pb-3">
+                        <div class="dropdown">
+                            <button class="list-group-item btn btn-secondary dropdown-toggle rounded-0 fnb" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              {%Usuario%}
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                          </div>
+                        <a href="#" class="list-group-item list-group-item fnb">Mis compras</a>
+                        <div class="dropdown">
+                            <button class="list-group-item btn btn-secondary dropdown-toggle rounded-0 fnb" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              {%Favoritos%}
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                          </div>
+                          <a href="#" class="mt-2"><i class="bi bi-alarm mf-2 link-body-emphasis"></i></a>
+                          <a href="#" class="mt-2"><i class="bi bi-cart mx-2 link-body-emphasis"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <main>
+<div class="container">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active moto_img" data-bs-interval="10000">
+            <img src="img/moto1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item moto_img" data-bs-interval="2000">
+            <img src="img/moto2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item moto_img">
+            <img src="img/moto3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="img/producto.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="img/disney.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
