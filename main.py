@@ -62,6 +62,14 @@ def cal_segundo(n, arr):
     return segundo
 
 
+def validador(arr, k):
+    view = set()
+    for num in arr:
+        com = k - num
+        if com in view:
+            return True
+        view.add(num)
+    return False
 
 if __name__ == '__main__':
     n = int(input())
@@ -70,5 +78,44 @@ if __name__ == '__main__':
     arr = list(arr)
     print(cal_segundo(n, arr))
 
-    
-                            
+    arr = [1,3,7]
+    k = 8
+   # print(validador(arr, k))
+                    
+def maximaDiferencia(a):
+    min_val = a[0]
+    max_diff = -1
+
+    for j in range(1, len(a)):
+        if a[j] > min_val:
+            max_diff = max(max_diff, a[j] - min_val)
+
+        min_val = min(min_val, a[j])
+
+    return max_diff
+
+    a = [15,3]
+    print(maximaDiferencia(a))
+
+
+
+
+
+
+"""                
+
+                SELECT
+    s.AREA,
+    AVG(s.SALARY) AS average_salary
+FROM
+    Users u
+JOIN
+    Salaries s ON u.ID = s.USER_ID
+WHERE
+    u.AGE > 50
+GROUP BY
+    s.AREA
+HAVING
+    COUNT(s.USER_ID) > 2
+ORDER BY
+    s.AREA ASC;"""
