@@ -1,19 +1,26 @@
 import pygame
 from TikTokLive import TikTokLiveClient
-from TikTokLive.events import LikeEvent, GiftEvent, ShareEvent
+from TikTokLive.events import LikeEvent, GiftEvent, ShareEvent, JoinEvent, ConnectEvent             
 import pydirectinput
+import pyttsx3
+
+import threading
+import queue
+import time
 # =========================
 # CONFIGURACIÓN
 # =========================
 TIKTOK_USER = "sebas.linarest"   # Sin @
-SONIDO_PATH = "C:/Users/tolis/Music/boom.mp3"    # Archivo de sonido (MP3 o WAV)
-SONIDO_PATH_1 = "C:/Users/tolis/Music/cowbell.mp3"    # Archivo de sonido (MP3 o WAV)
-SONIDO_PATH_2 = "C:/Users/tolis/Music/phone.mp3"    # Archivo de sonido (MP3 o WAV)
-SONIDO_PATH_3 = "C:/Users/tolis/Music/gun.mp3"    # Archivo de sonido (MP3 o WAV)
+SONIDO_PATH = "C:/Users/USUARIO/OneDrive/Videos/boom.mp3"    # Archivo de sonido (MP3 o WAV)
+SONIDO_PATH_1 = "C:/Users/USUARIO/OneDrive/Videos/cowbell.mp3"    # Archivo de sonido (MP3 o WAV)
+SONIDO_PATH_2 = "C:/Users/USUARIO/OneDrive/Videos/phone.mp3"    # Archivo de sonido (MP3 o WAV)
+SONIDO_PATH_3 = "C:/Users/USUARIO/OneDrive/Videos/gun.mp3"    # Archivo de sonido (MP3 o WAV)
 # =========================
 
 # Inicializar pygame mixer para reproducir audio
 pygame.mixer.init()
+engine = pyttsx3.init()
+
 
 # Cargar el sonido
 sonido = pygame.mixer.Sound(SONIDO_PATH)
@@ -45,7 +52,7 @@ async def on_share(event: ShareEvent):
 @client.on(GiftEvent)
 async def on_gift(event: GiftEvent):
     gift_name = event.gift.name
-    print(f"Regalo recibido: {gift_name} por {event.user.unique_id}")
+    print(f"Regalo recibido: {gift_name} por {event.user.nickname}")
 
     # Ejemplos de acciones según el regalo
     if gift_name.lower() == "rose":
@@ -59,8 +66,20 @@ async def on_gift(event: GiftEvent):
     else:
         print("Regalo no reconocido, acción por defecto")
         pydirectinput.press('enter')  # Acción por defecto
+"""""
+# Cuando se conecta al live
+@client.on(ConnectEvent)
+async def on_connect(event: ConnectEvent):
+    print("Conectado al live de", USERNAME)
+    voz_cola.put("Conectado al live de " + USERNAME)
 
-
+# Cuando alguien entra al live
+@client.on(JoinEvent)
+async def on_join(event: JoinEvent):
+    mensaje = f"{event.user.uniqueId} ha entrado al live."
+    print(mensaje)
+    voz_cola.put(mensaje)
+"""
 # Ejecutar
 if __name__ == "__main__":
     sonido.play()
